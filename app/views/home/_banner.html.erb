@@ -14,9 +14,11 @@
     <div class="container">
       <div class="banner-search-inner">
         <ul class="custom-list tab-title-list clearfix">
-          <li class="tab-title active"><a href="#swap">Swap</a></li>
+          <li class="tab-title active"><a href="#swap">找東西？</a></li>
+          <% if false %>
           <li class="tab-title"><a href="#book">Book</a></li>
           <li class="tab-title"><a href="#rent">Rent</a></li>
+          <% end %>
         </ul>
         <ul class="custom-list tab-content-list">
 
@@ -26,41 +28,28 @@
 
               <!-- SEARCH INPUT : begin -->
               <span class="search-input">
-                <input type="text" placeholder="Where do you want to swap?">
+                <input type="text" placeholder="物品名稱">
               </span>
               <!-- SEARCH INPUT : end -->
 
               <!-- ARRIVAL DATE : begin -->
-              <span class="calendar-input input-left" title="Arrival">
-                <input type="text" name="arrival" placeholder="Arrival" data-dateformat="m/d/y">
+              <span class="calendar-input input-left" title="開始借用日期">
+                <input type="text" name="arrival" placeholder="開始借用日期" data-dateformat="m/d/y">
                 <i class="fa fa-calendar"></i>
               </span>
               <!-- ARRIVAL DATE : end -->
 
               <!-- DEPARTURE DATE : begin -->
-              <span class="calendar-input input-right" title="Departure">
-                <input type="text" name="departure" placeholder="Departure" data-dateformat="m/d/y">
+              <span class="calendar-input input-right" title="結束借用日期">
+                <input type="text" name="departure" placeholder="結束借用日期" data-dateformat="m/d/y">
                 <i class="fa fa-calendar"></i>
               </span>
               <!-- DEPARTURE DATE : end -->
 
-              <!-- ADULTS : begin -->
-              <span class="select-box" title="Adults">
-                <select name="adults" data-placeholder="Adults">
-                  <option>Adults</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </span>
-              <!-- ADULTS : end -->
-
-              <!-- CHILDREN : begin -->
-              <span class="select-box" title="Children">
-                <select name="children" data-placeholder="Children">
-                  <option>Children</option>
+              <!-- Quantity : begin -->
+              <span class="select-box" title="數量">
+                <select name="quantity" data-placeholder="數量">
+                  <option> 數量 </option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
