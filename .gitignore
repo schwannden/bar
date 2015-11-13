@@ -17,3 +17,4 @@
 /tmp
 
 *passenger*pid*
+.DS_Store
