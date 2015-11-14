@@ -33,7 +33,7 @@
       <div class="col-md-4 col-md-offset-2">
         <div class="project-container">
           <div class="project-header">
-            <a class="project-thumb lightbox" href="dummies/property_01.jpg" 
+            <a class="project-thumb lightbox" href="<%= admin_buckets_path %>" 
                data-lightbox-group="dummy-projects"
                style="height: 70px">
               <span class="overlay" style="background-color: rgba(167, 151, 156, 0.9);"></span>
@@ -44,7 +44,8 @@
             </ul>
           </div>
           <div class="project-content">
-            <h1 class="project-title"><a href="#"> 管理物品 </a></h1>
+            <h1 class="project-title"><a href="<%= admin_buckets_path %>">
+              管理物品 </a></h1>
             <h5 class="project-category"> manage buckets </h5>
           </div>
         </div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :buckets  , only: [:new, :create, :edit, :update, :destroy]
+    resources :buckets  , only: [:index, :new, :create, :edit, :update, :destroy]
     resources :galleries, only: [:update]
     get "/" => "administration#index"
   end
@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end
   devise_for :users
   root 'home#index'
+  get  'index.html' => 'home#index'
   resources :buckets, only: [:index,:show,:index_grid]
 end
