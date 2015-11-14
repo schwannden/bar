@@ -1,116 +1,93 @@
-								<!-- PROPERTIES LISTING : begin -->
-								<div class="properties-listing">
+<!-- PROPERTIES LISTING : begin -->
+<div class="properties-listing">
 
-									<!-- PROPERTIES LISTING HEADER : begin -->
-									<div class="properties-listing-header clearfix">
+	<!-- PROPERTIES LISTING HEADER : begin -->
+	<div class="properties-listing-header clearfix">
 
-										<!-- LIST SORTING : begin -->
-										<div class="list-sorting">
-											<form class="default-form" action="index.html">
-												<h5>Sort By</h5>
-												<span class="select-box">
-													<select name="sort-alphabetical">
-														<option value="asc">A to Z</option>
-														<option value="desc">Z to A</option>
-													</select>
-												</span>
-												<span class="select-box">
-													<select name="sort-rating">
-														<option value="asc">Rating &uarr;</option>
-														<option value="desc">Rating &darr;</option>
-													</select>
-												</span>
-												<span class="select-box">
-													<select name="sort-price">
-														<option value="asc">Price &uarr;</option>
-														<option value="desc">Price &darr;</option>
-													</select>
-												</span>
-											</form>
-										</div>
-										<!-- LIST SORTING : end -->
+		<!-- LIST SORTING : begin -->
+		<div class="list-sorting">
+			<form class="default-form" action="index.html">
+				<h5>Sort By</h5>
+				<span class="select-box">
+					<select name="sort-alphabetical">
+						<option value="asc">A to Z</option>
+						<option value="desc">Z to A</option>
+					</select>
+				</span>
+				<span class="select-box">
+					<select name="sort-rating">
+						<option value="asc">Rating &uarr;</option>
+						<option value="desc">Rating &darr;</option>
+					</select>
+				</span>
+				<span class="select-box">
+					<select name="sort-price">
+						<option value="asc">Price &uarr;</option>
+						<option value="desc">Price &darr;</option>
+					</select>
+				</span>
+			</form>
+		</div>
+		<!-- LIST SORTING : end -->
 
-										<!-- LIST LAYOUT : begin -->
-										<div class="list-layout">
-											<button class="button" data-layout="grid"><i class="fa fa-th"></i></button>
-											<button class="button active" data-layout="list"><i class="fa fa-list-ul"></i></button>
-										</div>
-										<!-- LIST LAYOUT : end -->
+		<!-- LIST LAYOUT : begin -->
+		<div class="list-layout">
+			<button class="button" data-layout="grid"><i class="fa fa-th"></i></button>
+			<button class="button active" data-layout="list"><i class="fa fa-list-ul"></i></button>
+		</div>
+		<!-- LIST LAYOUT : end -->
+	</div>
+	<!-- PROPERTIES LISTING HEADER : end -->
 
-									</div>
-									<!-- PROPERTIES LISTING HEADER : end -->
+	<!-- PROPERTY LIST : begin -->
+	<ul class="custom-list clearfix property-list layout-list">
+		<% Bucket.all.each do |bucket| %>
+		<li class="property first-in-row odd">
+			<a href="#" class="property-thumb">
+				<img src="<%= bucket.galleries.first.image.list.url %>" alt="">
+				<span class="overlay"><span><i class="fa fa-search"></i> View More</span></span>
+			</a>
+			<div class="property-content">
+				<h4 class="property-title"><a href="#"><%= bucket.title %></a></h4>
+				<h5 class="property-location"><%= User.find_by(bucket.user_id).organization %></h5>
+				<p class="property-description"><%= bucket.description %></p>
+				<ul class="custom-list property-icons">
+					<li class="beds" title="beds"><i></i>2</li>
+					<li class="people" title="people"><i></i>4</li>
+					<li class="bathrooms" title="bathrooms"><i></i>1</li>
+				</ul>
+				<div class="property-price-rating">
+					<div class="property-price"><strong>$ <%= bucket.price %></strong> / 天</div>
+					<div class="property-rating">
+						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+					</div>
+				</div>
+			</div>
+		</li>
+		<% end %>
+	</ul>
+	<!-- PROPERTY LIST : end -->
 
-									<!-- PROPERTY LIST : begin -->
-									<ul class="custom-list clearfix property-list layout-list">
+	<!-- PROPERTIES LISTING FOOTER : begin -->
+	<div class="properties-listing-footer clearfix">
+		<div class="default-form">
+			<span class="select-box links">
+				<select name="listing-pagination">
+					<option value="properties-listing-grid.html?page=1">Page 1</option>
+					<option value="properties-listing-grid.html?page=2">Page 2</option>
+					<option value="properties-listing-grid.html?page=3">Page 3</option>
+					<option value="properties-listing-grid.html?page=4">Page 4</option>
+					<option value="properties-listing-grid.html?page=5">Page 5</option>
+					<option value="properties-listing-grid.html?page=6">Page 6</option>
+					<option value="properties-listing-grid.html?page=7">Page 7</option>
+					<option value="properties-listing-grid.html?page=8">Page 8</option>
+					<option value="properties-listing-grid.html?page=9">Page 9</option>
+					<option value="properties-listing-grid.html?page=10">Page 10</option>
+				</select>
+			</span>
+		</div>
+	</div>
+	<!-- PROPERTIES LISTING FOOTER : end -->
 
-										<!-- PROPERTY 1 : begin -->
-										<li class="property first-in-row odd">
-											<a href="#" class="property-thumb">
-												<img src="dummies/property_thumb_01.jpg" alt="">
-												<span class="overlay"><span><i class="fa fa-search"></i> View More</span></span>
-											</a>
-											<div class="property-content">
-												<h4 class="property-title"><a href="#">Property Name Goes Here</a></h4>
-												<h5 class="property-location">Sinaloa, Mexico</h5>
-												<p class="property-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit.</p>
-												<ul class="custom-list property-icons">
-													<li class="beds" title="beds"><i></i>2</li>
-													<li class="people" title="people"><i></i>4</li>
-													<li class="bathrooms" title="bathrooms"><i></i>1</li>
-												</ul>
-												<div class="property-price-rating">
-													<div class="property-price"><strong>$ 37</strong> / night</div>
-													<div class="property-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-												</div>
-											</div>
-										</li>
-										<!-- PROPERTY 1 : end -->
-
-										<!-- PROPERTY 2 : begin -->
-										<li class="property">
-											<a href="#" class="property-thumb">
-												<img src="dummies/property_thumb_02.jpg" alt="">
-												<span class="overlay"><span><i class="fa fa-search"></i> View More</span></span>
-											</a>
-											<div class="property-content">
-												<h4 class="property-title"><a href="#">Property Name Goes Here</a></h4>
-												<h5 class="property-location">Sinaloa, Mexico</h5>
-												<p class="property-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit.</p>
-												<ul class="custom-list property-icons">
-													<li class="beds" title="beds"><i></i>2</li>
-													<li class="people" title="people"><i></i>4</li>
-													<li class="bathrooms" title="bathrooms"><i></i>1</li>
-												</ul>
-												<div class="property-price-rating">
-													<div class="property-price"><strong>$ 37</strong> / night</div>
-													<div class="property-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-												</div>
-											</div>
-										</li>
-										<!-- PROPERTY 2 : end -->
-									</ul>
-									<!-- PROPERTY LIST : end -->
-
-									<!-- PROPERTIES LISTING FOOTER : begin -->
-									<div class="properties-listing-footer clearfix">
-										<div class="default-form">
-											<span class="select-box links">
-												<select name="listing-pagination">
-													<option value="properties-listing-grid.html?page=1">Page 1</option>
-													<option value="properties-listing-grid.html?page=2">Page 2</option>
-													<option value="properties-listing-grid.html?page=3">Page 3</option>
-													<option value="properties-listing-grid.html?page=4">Page 4</option>
-													<option value="properties-listing-grid.html?page=5">Page 5</option>
-													<option value="properties-listing-grid.html?page=6">Page 6</option>
-													<option value="properties-listing-grid.html?page=7">Page 7</option>
-													<option value="properties-listing-grid.html?page=8">Page 8</option>
-													<option value="properties-listing-grid.html?page=9">Page 9</option>
-													<option value="properties-listing-grid.html?page=10">Page 10</option>
-												</select>
-											</span>
-										</div>
-									</div>
-									<!-- PROPERTIES LISTING FOOTER : end -->
-
-								</div>
-								<!-- PROPERTIES LISTING : end -->
+</div>
+<!-- PROPERTIES LISTING : end -->
