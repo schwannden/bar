@@ -157,28 +157,38 @@
           </div> -->
           <!-- HEADER LANGUAGE : end -->
 
+          <% if user_signed_in? %>
+          <div class="header-register">
+            <a class="header-btn" href="<%= destroy_user_session_path %>"
+              data-method="delete">
+              <i class="fa fa-sign-out"></i> 登出 
+            </a>
+          </div>
+          <!-- HEADER REGISTER : end -->
+          <% else %>
           <!-- HEADER REGISTER : begin -->
           <div class="header-register">
-            <button class="register-toggle header-btn"><i class="fa fa-plus-circle"></i> Register</button>
+            <button class="register-toggle header-btn"><i class="fa fa-plus-circle"></i> 註冊 </button>
             <div class="header-form">
-              <form action="index.html" class="default-form">
-                <p class="alert-message warning"><i class="ico fa fa-exclamation-circle"></i> All fields are required! <i class="fa fa-times close"></i></p>
+              <%= form_for @user, url: registration_path(@user),
+                  html: { class: "default-form"} do |f| %>
+                <p class="alert-message warning"><i class="ico fa fa-exclamation-circle"></i> 所有的欄位都要填喔！<i class="fa fa-times close"></i></p>
                 <p class="form-row">
-                  <input class="required" type="text" placeholder="Username">
+                  <%= f.text_field :email, placeholder: "email",
+                      class: "required email"  %>
                 </p>
                 <p class="form-row">
-                  <input class="required email" type="text" placeholder="Email">
+                  <%= f.password_field :password, 
+                    placeholder: "密碼", class: "required" %>
                 </p>
                 <p class="form-row">
-                  <input class="required" type="password" placeholder="Password">
+                  <%= f.password_field :password_confirmation, 
+                    placeholder: "重複輸入您的密碼", class: "required" %>
                 </p>
                 <p class="form-row">
-                  <input class="required" type="password" placeholder="Repeat Password">
+                  <%= f.submit "註冊", class: "submit-btn button" %>
                 </p>
-                <p class="form-row">
-                  <button class="submit-btn button"><i class="fa fa-plus-circle"></i> Register</button>
-                </p>
-              </form>
+              <% end %>
             </div>
           </div>
           <!-- HEADER REGISTER : end -->
@@ -187,24 +197,28 @@
           <div class="header-login">
             <button class="login-toggle header-btn"><i class="fa fa-power-off"></i> Login</button>
             <div class="header-form">
-              <form action="index.html" class="default-form">
-                <p class="alert-message warning"><i class="ico fa fa-exclamation-circle"></i> All fields are required! <i class="fa fa-times close"></i></p>
+              <%= form_for @user, url: user_session_path,
+                  html: { class: "default-form"} do |f| %>
+                <p class="alert-message warning"><i class="ico fa fa-exclamation-circle"></i> 所有的欄位都要填喔！ <i class="fa fa-times close"></i></p>
                 <p class="form-row">
-                  <input class="required email" type="text" placeholder="Email">
+                  <%= f.text_field :email, placeholder: "email",
+                      class: "required email" %>
                 </p>
                 <p class="form-row">
-                  <input class="required" type="password" placeholder="Password">
+                  <%= f.password_field :password, 
+                    placeholder: "密碼", class: "required" %>
                 </p>
                 <p class="form-row">
                   <button class="submit-btn button"><i class="fa fa-power-off"></i> Login</button>
                 </p>
                 <p class="form-row forgot-password">
-                  <a href="#">Forgot Password?</a>
+                  <a href="#"> 忘記密碼 </a>
                 </p>
-              </form>
+              <% end %>
             </div>
           </div>
           <!-- HEADER LOGIN : end -->
+          <% end %>
 
           <!-- HEADER ADD OFFER : begin -->
           <span class="header-add-offer"><a href="#" class="button"><i class="fa fa-plus"></i> Add Offer</a></span>
