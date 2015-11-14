@@ -12,6 +12,8 @@ class Admin::BucketsController < Admin::AdminBaseController
   def create
     @admin_bucket = Bucket.new admin_bucket_params
     if @admin_bucket.save
+      Gallery.create bucket: @admin_bucket, name: "gallery",
+        image: Rails.root.join('db/image/dummy_square.jpg').open
       redirect_to edit_admin_bucket_path @admin_bucket
     else
       redirect_to new_admin_bucket_path
@@ -31,7 +33,7 @@ class Admin::BucketsController < Admin::AdminBaseController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_admin_bucket
-    @admin_bucket = Bucket.find(params[:id])
+    @admin_bucket = Admin::BucketDecorator.new Bucket.find(params[:id])
   end
 
  # Never trust parameters from the scary internet, only allow the white list through.

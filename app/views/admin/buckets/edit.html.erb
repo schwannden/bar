@@ -35,6 +35,13 @@
         <div class="container">
           <div class="col-md-3">
             <h2>編輯物品</h2>
+            <%= form_for @admin_bucket.avatar,
+              url: admin_gallery_path(@admin_bucket.avatar),
+              html: { class: "dropzone", id: "gallery-upload",
+                      style: "border: 2px dashed #0087F7; margin: 27px 0 0 0; min-height: 163px; padding: 5px" } do %>
+              <div class="dz-message" data-dz-message><i class="icon-plus" style="font-size: 50px; margin-top: 2-px;"></i>
+                <p> 拖曳至此 或者 点击上传新相片 </p></div>
+            <% end %>
           </div>
           <div class="col-md-9">
             <%= form_for @admin_bucket, as: :admin_bucket,
