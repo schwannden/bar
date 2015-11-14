@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   devise_for :users
   root 'home#index'
+  resources :buckets, only: [:index,:show,:index_grid]
 end
