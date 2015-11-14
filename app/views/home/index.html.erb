@@ -1,25 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Bar - Borrow, Book &amp; Rent</title>
-    <link rel="shortcut icon" href="dummies/favicon.ico">
-
-    <!-- GOOGLE FONTS : begin -->
-    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-    <!-- GOOGLE FONTS : end -->
-
-    <!-- STYLESHEETS : begin -->
+      <%= render "layouts/meta"%>
+      <!-- STYLESHEETS : begin -->
+      <!-- CSS include order will effect the result !!, DO NOT CHANGE ORDER-->
       <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="library/css/owl.carousel.css">
+      <%= stylesheet_link_tag "animate.custom" %>
       <link rel="stylesheet" type="text/css" href="library/css/magnific-popup.css">
-      <%= stylesheet_link_tag "skins/default"%>
-      <%= stylesheet_link_tag "animate.custom"%>
-      <%= stylesheet_link_tag "style"%>
-    <!--link rel="stylesheet" type="text/css" href="library/css/custom.css"> uncomment if you want to use custom CSS definitions -->
-    <!-- STYLESHEETS : end -->
+      <%= stylesheet_link_tag "style" %>
+      <%= stylesheet_link_tag "skins/default" %>
+      <!--link rel="stylesheet" type="text/css" href="library/css/custom.css"> uncomment if you want to use custom CSS definitions -->
+      <!-- STYLESHEETS : end -->
 
         <!--[if lte IE 8]>
       <link rel="stylesheet" type="text/css" href="library/css/oldie.css">

@@ -1,0 +1,205 @@
+								<!-- PROPERTIES SEARCH : begin -->
+								<aside class="properties-search">
+									<h3 class="properties-search-title">想找些什麼呢？</h3>
+
+									<!-- PROPERTIES SEARCH BASIC : begin -->
+									<div class="properties-search-basic">
+
+										<!-- FORM SWAP : begin -->
+										<form class="default-form" action="index.html" id="properties-search-form-swap">
+
+											<!-- SEARCH INPUT : begin -->
+											<div class="search-input">
+												<input type="text" placeholder="請輸入物品名稱">
+											</div>
+
+											<!-- SEARCH INPUT : end -->
+
+											<!-- ARRIVAL DATE, DEPARTURE DATE : begin -->
+											<p class="form-row clearfix">
+												<span class="calendar-input input-left" title="Arrival">
+													<input type="text" name="arrival" placeholder="起始時間" data-dateformat="m/d/y">
+													<i class="fa fa-calendar"></i>
+												</span>
+												<span class="calendar-input input-right" title="Departure">
+													<input type="text" name="departure" placeholder="結束時間" data-dateformat="m/d/y">
+													<i class="fa fa-calendar"></i>
+												</span>
+											</p>
+											<!-- ARRIVAL DATE, DEPARTURE DATE : end -->
+
+											<!-- NUMBER OF ADULTS AN CHILDREN : begin -->
+											<p class="form-row clearfix">
+												<span class="input-left" title="Quantity">
+													<input type="text" placeholder="數量">
+												</span>
+											</p>
+											<!-- NUMBER OF ADULTS AN CHILDREN : end -->
+
+											<p class="form-row">
+												<button class="button submit-btn"><i class="fa fa-search"></i> 搜尋</button>
+											</p>
+										</form>
+									</div>
+
+									<!-- PROPERTIES SEARCH BASIC : end -->
+									<hr class="form-divider">
+									<!-- PROPERTIES SEARCH FILTER : begin -->
+									<div class="properties-search-filter">
+										<form class="default-form" action="index.html">
+
+											<h4 class="filter-title">Filter Results</h4>
+
+											<!-- PRICE FILTER : begin -->
+											<div class="price-filter toggle-container">
+												<h5 class="toggle-title">By Price</h5>
+												<div class="toggle-content">
+
+													<div class="slider-range-container">
+														<div class="slider-range" data-min="100" data-max="2000" data-step="100" data-default-min="100" data-default-max="500" data-currency="$"></div>
+														<div class="clearfix">
+															<input type="text" class="range-from" value="$ 10">
+															<input type="text" class="range-to" value="$ 500">
+														</div>
+													</div>
+
+												</div>
+											</div>
+											<!-- PRICE FILTER : end -->
+
+											<% if false %>
+											<!-- RATING FILTER : begin -->
+											<div class="rating-filter toggle-container">
+												<h5 class="toggle-title">By Rating</h5>
+												<div class="toggle-content">
+
+													<ul class="custom-list rating-filter-list">
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="rating-filter-5star" checked="checked">
+																<label for="rating-filter-5star">
+																	<span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+																	<span class="label">5 stars</span>
+																</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="rating-filter-4star">
+																<label for="rating-filter-4star">
+																	<span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+																	<span class="label">4 stars</span>
+																</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="rating-filter-3star">
+																<label for="rating-filter-3star">
+																	<span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+																	<span class="label">3 stars</span>
+																</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="rating-filter-2star">
+																<label for="rating-filter-2star">
+																	<span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+																	<span class="label">2 stars</span>
+																</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="rating-filter-1star">
+																<label for="rating-filter-1star">
+																	<span class="stars"><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+																	<span class="label">1 star</span>
+																</label>
+															</span>
+														</li>
+													</ul>
+
+												</div>
+											</div>
+											<!-- RATING FILTER : end -->
+											<% end %>
+											<!-- ADDITIONAL FILTER : begin -->
+											<div class="additional-filter toggle-container">
+												<h5 class="toggle-title">Additional Preferences</h5>
+												<div class="toggle-content">
+
+													<ul class="custom-list additional-filter-list">
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-air-conditioning">
+																<label for="additional-filter-air-conditioning">Air Conditioning</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-garden">
+																<label for="additional-filter-garden">Garden</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-swimming-pool">
+																<label for="additional-filter-swimming-pool">Swimming Pool</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-sea-view">
+																<label for="additional-filter-sea-view">Sea View</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-pets-allowed">
+																<label for="additional-filter-pets-allowed">Pets Allowed</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-parking">
+																<label for="additional-filter-parking">Parking</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-internet-connection">
+																<label for="additional-filter-internet-connection">Internet Connection</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-radio-tv">
+																<label for="additional-filter-radio-tv">Radio/TV</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-separate-toilet">
+																<label for="additional-filter-separate-toilet">Separate Toilet</label>
+															</span>
+														</li>
+														<li>
+															<span class="checkbox-input">
+																<input type="checkbox" id="additional-filter-children-friendly">
+																<label for="additional-filter-children-friendly">Children Friendly</label>
+															</span>
+														</li>
+													</ul>
+
+												</div>
+											</div>
+											<!-- ADDITIONAL FILTER : end -->
+
+										</form>
+									</div>
+									<!-- PROPERTIES SEARCH FILTER : end -->
+
+								</aside>
+								<!-- PROPERTIES SEARCH : end -->

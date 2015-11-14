@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<%= render "layouts/meta" %>
+        <!-- STYLESHEETS : begin -->
+        <!-- CSS include order will effect the result !!, DO NOT CHANGE ORDER-->
+        <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="library/css/owl.carousel.css">
+		<%= stylesheet_link_tag "animate.custom" %>
+		<link rel="stylesheet" type="text/css" href="library/css/magnific-popup.css">
+        <%= stylesheet_link_tag "style" %>
+        <%= stylesheet_link_tag "skins/default" %>
+		<!--link rel="stylesheet" type="text/css" href="library/css/custom.css"> uncomment if you want to use custom CSS definitions -->
+		<!-- STYLESHEETS : end -->
+		
+        <!--[if lte IE 8]>
+			<link rel="stylesheet" type="text/css" href="library/css/oldie.css">
+			<script src="library/js/respond.min.js" type="text/javascript"></script>
+        <![endif]-->
+	</head>
+	<body class="enable-fixed-header enable-style-switcher enable-inview-animations">
+        <%= render "layouts/header" %>
+		<!-- CORE : begin -->
+		<div id="core" class="page-search-results">
+			<!-- PAGE HEADER : begin -->
+			<div class="page-header">
+				<div class="container">
+					<div class="page-header-inner clearfix">
+						<h1>Search Results - XXX Objects</h1>
+						<ul class="custom-list breadcrumbs">
+							<li><a href="index.html">Home</a> / </li>
+							<li><a href="properties-listing-grid.html">Search Results</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- PAGE HEADER : end -->
+
+			<!-- MAIN WRAPPER : begin -->
+			<div class="main-wrapper-container">
+				<div class="container">
+					<div id="main-wrapper">
+						<div class="row">
+							<div class="col-md-8 col-md-push-4">
+								<%= render "buckets/properties_listing" %>
+							</div>
+							<div class="col-md-4 col-md-pull-8">
+								<%= render "buckets/properties_search" %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- MAIN WRAPPER : end -->
+
+		</div>
+		<!-- CORE : end -->
+        <%= render "layouts/footer" %>
+
+        <!-- SCRIPTS : begin -->
+    	<%= javascript_include_tag :public %>
+    	<%= javascript_include_tag :scripts %>
+		<!-- SCRIPTS : end -->
+
+	</body>
+</html>
