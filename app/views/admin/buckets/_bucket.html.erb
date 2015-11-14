@@ -16,6 +16,9 @@
     <div class="property-price-rating">
       <div class="property-price"><strong>$ <%= bucket.price%> </strong> / 天</div>
       <div class="property-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+      <a class="button" href="<%= edit_admin_bucket_path bucket %>"> 
+        <i class="fa fa-edit"></i> 編輯 </a>
+      <a class="button color-2"> <i class="fa fa-minus"></i> 刪除 </a>
     </div>
   </div>
 </li>

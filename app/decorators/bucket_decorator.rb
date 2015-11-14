@@ -16,6 +16,10 @@ class BucketDecorator
     @bucket.galleries.first.image.url
   end
 
+  def thumb_url
+    @bucket.galleries.first.image.thumb.url
+  end
+
   def to_param
     @bucket.id.to_s
   end

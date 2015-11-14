@@ -25,6 +25,8 @@ class Admin::BucketsController < Admin::AdminBaseController
   end
 
   def update
+    @admin_bucket.update admin_bucket_params
+    respond_to :js
   end
 
   def destroy
