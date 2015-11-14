@@ -12,9 +12,8 @@
     <!-- GOOGLE FONTS : end -->
 
     <!-- STYLESHEETS : begin -->
-      <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="library/css/owl.carousel.css">
-      <link rel="stylesheet" type="text/css" href="library/css/magnific-popup.css">
+      <link rel="stylesheet" type="text/css" href="/library/css/font-awesome.min.css">
+      <%= stylesheet_link_tag params[:controller] %>
       <%= stylesheet_link_tag "skins/default"%>
       <%= stylesheet_link_tag "animate.custom"%>
       <%= stylesheet_link_tag "style"%>
@@ -28,24 +27,43 @@
 
   </head>
   <body class="enable-fixed-header enable-inview-animations">
+    <%= render "layouts/header"%>
 
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row" style="margin-bottom: 180px">
+      <div class="col-md-4 col-md-offset-2">
         <div class="project-container">
           <div class="project-header">
-            <a class="project-thumb lightbox" href="dummies/property_01.jpg" data-lightbox-group="dummy-projects">
-              <img alt="" src="dummies/property_thumb_01_270.jpg">
-              <span class="overlay"><span><span><i class="fa fa-search"></i> Zoom In</span></span></span>
+            <a class="project-thumb lightbox" href="dummies/property_01.jpg" 
+               data-lightbox-group="dummy-projects"
+               style="height: 70px">
+              <span class="overlay" style="background-color: rgba(167, 151, 156, 0.9);"></span>
             </a>
             <ul class="custom-list project-tags">
-              <li>Tag1,</li>
-              <li>Tag2,</li>
-              <li>Tag3</li>
+              <li>編輯物品，</li>
+              <li>瀏覽物品</li>
             </ul>
           </div>
           <div class="project-content">
-            <h4 class="project-title"><a href="#">Project Name Goes Here</a></h4>
-            <h5 class="project-category">Category Name</h5>
+            <h1 class="project-title"><a href="#"> 管理物品 </a></h1>
+            <h5 class="project-category"> manage buckets </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-container">
+          <div class="project-header">
+            <a class="project-thumb lightbox" href="<%= new_admin_bucket_path %>" 
+               data-lightbox-group="dummy-projects"
+               style="height: 70px">
+              <span class="overlay" style="background-color: rgba(167, 151, 156, 0.9);"></span>
+            </a>
+            <ul class="custom-list project-tags">
+              <li>新增物品</li>
+            </ul>
+          </div>
+          <div class="project-content">
+            <h1 class="project-title"><a href="<%= new_admin_bucket_path %>"> 新增物品 </a></h1>
+            <h5 class="project-category"> new buckets </h5>
           </div>
         </div>
       </div>

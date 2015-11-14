@@ -336,54 +336,6 @@
     }
     };
 
-  /* -------------------------------------------------------------------------
-    LIGHTBOX
-  ------------------------------------------------------------------------- */
-
-  // LIGHTBOX STRINGS SETUP
-  $.extend( true, $.magnificPopup.defaults, {
-    tClose: 'Close (Esc)',
-    tLoading: 'Loading...',
-    gallery: {
-      tPrev: 'Previous (Left arrow key)', // Alt text on left arrow
-      tNext: 'Next (Right arrow key)', // Alt text on right arrow
-      tCounter: '%curr% / %total%' // Markup for "1 of 7" counter
-    },
-    image: {
-      tError: '<a href="%url%">The image</a> could not be loaded.' // Error message when image could not be loaded
-    },
-    ajax: {
-      tError: '<a href="%url%">The content</a> could not be loaded.' // Error message when ajax request failed
-    }
-  });
-
-  // FUNCTION
-  $.fn.uouInitLightboxes = function(){
-    if ( $.fn.magnificPopup ) {
-      $(this).find( 'a.lightbox' ).each(function(){
-
-        var self = $(this),
-        lightbox_group = self.data( 'lightbox-group' ) ? self.data( 'lightbox-group' ) : false;
-
-        if ( lightbox_group ) {
-          $( 'a.lightbox[data-lightbox-group="' + lightbox_group + '"]' ).magnificPopup({
-            type: 'image',
-            removalDelay: 300,
-            mainClass: 'mfp-fade',
-            gallery: {
-              enabled: true
-            }
-          });
-        }
-        else {
-          self.magnificPopup({
-            type: 'image'
-          });
-        }
-
-      });
-    }
-  };
 
   /* -------------------------------------------------------------------------
     MEDIA QUERY BREAKPOINT
@@ -639,9 +591,6 @@ $(document).ready(function(){
 
   });
 
-  // LIGHTBOXES
-  $( 'body' ).uouInitLightboxes();
-
   // PROGRESS BARS
   $( '.progress-bar' ).each(function(){
     $(this).uouProgressBar();
@@ -786,26 +735,65 @@ $(document).ready(function(){
   });
 
   /* -------------------------------------------------------------------------
-    HEADER LANGUAGE
+    HEADER LOGOUT
   ------------------------------------------------------------------------- */
 
-  $( '.header-language' ).each(function(){
-
-    var self = $(this);
+  $('.header-logout').each(function(){
+    var self = $(this),
+    form_holder = self.find( '.header-list' ),
+    btn = self.find( '.header-btn' );
 
     // HOVER
     self.hover(function(){
       if ( media_query_breakpoint > 991 ) {
         self.find( '.header-btn' ).addClass( 'hover' );
-        self.find( '.header-nav' ).show();
-        self.find( '.header-nav ul' ).stop( true, true ).slideDown(200);
+        form_holder.stop( true, true ).slideDown(200);
       }
     }, function(){
       if ( media_query_breakpoint > 991 ) {
         self.find( '.header-btn' ).removeClass( 'hover' );
-        self.find( '.header-nav ul' ).stop( true, true ).delay(10).slideUp(200, function(){
-          self.find( '.header-nav' ).hide();
-        });
+        form_holder.stop( true, true ).delay(10).slideUp(200);
+      }
+    });
+
+    // TOGGLE
+    btn.click(function(){
+      if ( media_query_breakpoint <= 991 ) {
+        self.find( '.header-btn' ).toggleClass( 'hover' );
+        form_holder.stop( true, true ).slideToggle(200);
+      }
+    });
+
+  });
+
+  /* -------------------------------------------------------------------------
+    HEADER PROFILE
+  ------------------------------------------------------------------------- */
+
+  $( '.header-profile' ).each(function(){
+
+    var self = $(this),
+    form_holder = self.find( '.header-list' ),
+    btn = self.find( '.header-btn' );
+
+    // HOVER
+    self.hover(function(){
+      if ( media_query_breakpoint > 991 ) {
+        self.find( '.header-btn' ).addClass( 'hover' );
+        form_holder.stop( true, true ).slideDown(200);
+      }
+    }, function(){
+      if ( media_query_breakpoint > 991 ) {
+        self.find( '.header-btn' ).removeClass( 'hover' );
+        form_holder.stop( true, true ).delay(10).slideUp(200);
+      }
+    });
+
+    // TOGGLE
+    btn.click(function(){
+      if ( media_query_breakpoint <= 991 ) {
+        self.find( '.header-btn' ).toggleClass( 'hover' );
+        form_holder.stop( true, true ).slideToggle(200);
       }
     });
 
