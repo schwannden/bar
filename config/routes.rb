@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :bucket , only: [:new, :create, :edit, :update]
+    resources :buckets, only: [:new, :create, :edit, :update, :destroy]
     get "/" => "administration#index"
   end
   resource :home, controller: :home, only: [] do

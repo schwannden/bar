@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bar - Borrow, Book &amp; Rent</title>
+    <link rel="shortcut icon" href="dummies/favicon.ico">
+
+    <!-- GOOGLE FONTS : begin -->
+    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+    <!-- GOOGLE FONTS : end -->
+
+    <!-- STYLESHEETS : begin -->
+      <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="library/css/owl.carousel.css">
+      <link rel="stylesheet" type="text/css" href="library/css/magnific-popup.css">
+      <%= stylesheet_link_tag "skins/default"%>
+      <%= stylesheet_link_tag "animate.custom"%>
+      <%= stylesheet_link_tag "style"%>
+    <!--link rel="stylesheet" type="text/css" href="library/css/custom.css"> uncomment if you want to use custom CSS definitions -->
+    <!-- STYLESHEETS : end -->
+
+        <!--[if lte IE 8]>
+      <link rel="stylesheet" type="text/css" href="library/css/oldie.css">
+      <script src="library/js/respond.min.js" type="text/javascript"></script>
+        <![endif]-->
+
+  </head>
+  <body class="enable-fixed-header enable-inview-animations">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="project-container">
+          <div class="project-header">
+            <a class="project-thumb lightbox" href="dummies/property_01.jpg" data-lightbox-group="dummy-projects">
+              <img alt="" src="dummies/property_thumb_01_270.jpg">
+              <span class="overlay"><span><span><i class="fa fa-search"></i> Zoom In</span></span></span>
+            </a>
+            <ul class="custom-list project-tags">
+              <li>Tag1,</li>
+              <li>Tag2,</li>
+              <li>Tag3</li>
+            </ul>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title"><a href="#">Project Name Goes Here</a></h4>
+            <h5 class="project-category">Category Name</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= render "layouts/footer"%>
+    <!-- SCRIPTS -->
+    <%= javascript_include_tag :public %>
+    <%= javascript_include_tag :scripts %>
+    <!-- SCRIPTS : end -->
+
+  </body>
+</html>
