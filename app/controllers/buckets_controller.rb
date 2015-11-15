@@ -14,7 +14,7 @@ class BucketsController < ApplicationController
 
   private
   def set_bucket
-      @bucket = Tour.find(params[:id])
+      @bucket = Bucket.find(params[:id])
   end
 
 end
