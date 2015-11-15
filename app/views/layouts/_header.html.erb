@@ -130,13 +130,18 @@
 
           <% if user_signed_in? %>
           <div class="header-login">
-            <button class="register-toggle header-btn">
-              <i class="fa fa-user"></i> Hello~ 
-              <%= current_user.email.split("@")[0] %>
+            <button class="register-toggle header-btn" >            
+              <i class="fa fa-user"></i> 
+              <%= current_user.email.split("@")[0] + "(" + current_user.organization + ")"%>
+              <i class="fa fa-angle-down"></i>
             </button>
-            <div class="header-form" style="width: 300px;">
-              <%= link_to "我的商品", admin_path %>
+            <div class="header-form" style="width:250px;">
+                <ul class="custom-list">
+                  <li><%= link_to "我的商品", admin_path %></li>
+                  <li><%= link_to "修改個人資料", edit_user_registration_path %></li>
+                </ul>
             </div>
+
           </div>
           <div class="header-register">
             <a class="header-btn"
@@ -201,9 +206,16 @@
           <!-- HEADER LOGIN : end -->
           <% end %>
 
-          <!-- HEADER ADD OFFER : begin -->
-          <span class="header-add-offer"><a href="#" class="button"><i class="fa fa-plus"></i> Add Offer</a></span>
-          <!-- HEADER ADD OFFER : end -->
+          <% if user_signed_in? %>
+            <!-- HEADER ADD OFFER : begin -->
+            <span class="header-add-offer">
+            <%= link_to "新增商品", new_admin_bucket_path ,{ :class=>"fa fa-plus button" }%> 
+            <!-- HEADER ADD OFFER : end -->
+          <% else %>
+            <span class="header-add-offer">
+            <div class="fa button"> 免費封測中！ </div> 
+          <% end %>
+          
 
         </div>
         <!-- HEADER TOOLS : end -->
