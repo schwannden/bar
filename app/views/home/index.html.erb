@@ -34,6 +34,11 @@
     <%= javascript_include_tag :public %>
     <%= javascript_include_tag :scripts %>
     <!-- SCRIPTS : end -->
+    <script>
+      $("#trigger-login").click(function(){
+        $(".header-login .header-form").show();
+      });
+    </script>
 
   </body>
 </html>

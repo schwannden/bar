@@ -4,7 +4,7 @@
   <!-- BANNER BG : begin -->
   <div class="banner-bg">
     <div class="banner-bg-item"><%= image_tag "bg_banner.jpg"%></div>
-    <div class="banner-bg-item"><%= image_tag "bg_banner2.jpg"%></div>
+    <div class="banner-bg-item"><%= image_tag "bg_banner.png"%></div>
     <div class="banner-bg-item"><%= image_tag "bg_banner2.jpg"%></div>
   </div>
   <!-- BANNER BG : end -->
@@ -14,7 +14,8 @@
     <div class="container">
       <div class="banner-search-inner">
         <ul class="custom-list tab-title-list clearfix">
-          <li class="tab-title active"><a href="#rent">找東西？</a></li>
+          <li class="tab-title active"><a href="#borrow">找東西？</a></li>
+          <li class="tab-title"><a href="#rent">出借東西？</a></li>
         </ul>
         <ul class="custom-list tab-content-list">
 
@@ -22,6 +23,10 @@
           <li class="tab-content active">
             <form class="default-form" action="index.html">
 
+              <h5 style="color: white">工程師團隊(對就是我)
+                還在很努力的讓這項服務可以上架 (對不起 <( _ _ )> </h5>
+              <h5 style="color: white">如果您喜歡我們的點子，請留下您的email。
+                產品完成的一天，我們會通知您喔～ (歐買尬有早鳥優惠呦~</h5>
               <!-- SEARCH INPUT : begin -->
               <span class="search-input">
                 <input type="text" placeholder="物品名稱">
@@ -59,6 +64,9 @@
               <span class="submit-btn">
                 <a href="./buckets"><div class="button"><i class="fa fa-search"></i>Search</div></a>
               </span>
+              <span>
+                <a class="button color-2" href="<%= feedback_path %>"><i class="fa fa-question"></i> 瞭解更多 </a>
+              </span>
               <!-- SUBMIT : end -->
 
             </form>
@@ -68,58 +76,20 @@
           <!-- BOOK : begin -->
           <li class="tab-content">
             <form class="default-form" action="index.html">
+              <h5 style="color: white">工程師團隊(對就是我)
+                  還在很努力的讓這項服務可以上架</h5>
+              <h5 style="color: white">如果您喜歡我們的服務，請留下您的email。
+                  產品完成的一天，我們會通知您喔～ (歐買尬有早鳥優惠呦~</h5>
 
-              <!-- SEARCH INPUT : begin -->
-              <span class="search-input">
-                <input type="text" placeholder="Where do you want to book?">
+              <p>
+                同時，很歡迎你到右上角註冊或登入後，到 <img src="/images/try2.png" style="width: 100px"> 去體驗我們的服務喔
+              </p>
+              <span>
+                <a class="button color-2" href="<%= feedback_path %>"><i class="fa fa-question"></i> 瞭解更多 </a>
               </span>
-              <!-- SEARCH INPUT : end -->
-
-              <!-- ARRIVAL DATE : begin -->
-              <span class="calendar-input input-left" title="Arrival">
-                <input type="text" name="arrival" placeholder="Arrival" data-dateformat="m/d/y">
-                <i class="fa fa-calendar"></i>
+              <span id="trigger-login">
+                <i class="button"><i class="fa fa-rocket"></i> 立馬體驗 </i>
               </span>
-              <!-- ARRIVAL DATE : end -->
-
-              <!-- DEPARTURE DATE : begin -->
-              <span class="calendar-input input-right" title="Departure">
-                <input type="text" name="departure" placeholder="Departure" data-dateformat="m/d/y">
-                <i class="fa fa-calendar"></i>
-              </span>
-              <!-- DEPARTURE DATE : end -->
-
-              <!-- ADULTS : begin -->
-              <span class="select-box" title="Adults">
-                <select name="adults" data-placeholder="Adults">
-                  <option>Adults</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </span>
-              <!-- ADULTS : end -->
-
-              <!-- CHILDREN : begin -->
-              <span class="select-box" title="Children">
-                <select name="children" data-placeholder="Children">
-                  <option>Children</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </span>
-              <!-- CHILDREN : end -->
-
-              <!-- SUBMIT : begin -->
-              <span class="submit-btn">
-                <button class="button"><i class="fa fa-search"></i> Search</button>
-              </span>
-              <!-- SUBMIT : end -->
 
             </form>
           </li>
