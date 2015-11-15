@@ -9,13 +9,15 @@
           <li class="tab-title"><a href="#top-destinations"> 最常租借 </a></li>
           <li class="tab-title"><a href="#our-members"> 我們的客戶 </a></li>
         </ul>
-        <ul class="custom-list tab-content-list browse-contents">
+        <ul class="custom-list tab-content-list browse-contents"
+          style="padding: 0px;" >
           <li class="tab-content active">
 
             <!-- BROWSE PROPERTIES : begin -->
             <div class="browse-properties">
-              <ul class="custom-list tab-content-list">
-                <li class="tab-content active"><img src="dummies/map_01.jpg" alt=""></li>
+              <ul class="custom-list tab-content-list"
+                style="padding: 0 10px 0px 10px;">
+                <li class="tab-content active"><img src="/images/steps.jpg" alt=""></li>
                 <li class="tab-content"><img src="dummies/map_02.jpg" alt=""></li>
                 <li class="tab-content"><img src="dummies/map_03.jpg" alt=""></li>
               </ul>
@@ -29,88 +31,28 @@
             <!-- BROWSE DESTINATIONS : begin -->
             <div class="browse-destinations">
 
-              <div class="row">
+              <% Bucket.all.limit(6).each_with_index do |bucket, i| %>
+                <% if i == 0 || i == 3 %>
+                  <div class="row">
+                <% end %>
                 <div class="col-sm-4">
-
                   <!-- TOP DESTINATION 1 : begin -->
                   <div class="top-destination">
-                    <img class="destination-thumb" src="dummies/top_destination_01.jpg" alt="">
+                    <img class="destination-thumb" alt=""
+                         src="<%= bucket.galleries.first.image.grid.url %>">
                     <div class="top-destination-inner">
-                      <h3>London</h3>
-                      <a href="#" class="button"><i class="fa fa-list-ul"></i> Browse</a>
+                      <h3> <%= bucket.title %> </h3>
+                      <a href="#" class="button">
+                        <i class="fa fa-list-ul"></i> 拎北想要！
+                      </a>
                     </div>
                   </div>
                   <!-- TOP DESTINATION 1 : end -->
-
                 </div>
-                <div class="col-sm-4">
-
-                  <!-- TOP DESTINATION 2 : begin -->
-                  <div class="top-destination">
-                    <img class="destination-thumb" src="dummies/top_destination_02.jpg" alt="">
-                    <div class="top-destination-inner">
-                      <h3>New York</h3>
-                      <a href="#" class="button"><i class="fa fa-list-ul"></i> Browse</a>
-                    </div>
+                <% if i == 2 || i == 5 %>
                   </div>
-                  <!-- TOP DESTINATION 2 : end -->
-
-                </div>
-                <div class="col-sm-4">
-
-                  <!-- TOP DESTINATION 3 : begin -->
-                  <div class="top-destination">
-                    <img class="destination-thumb" src="dummies/top_destination_03.jpg" alt="">
-                    <div class="top-destination-inner">
-                      <h3>Paris</h3>
-                      <a href="#" class="button"><i class="fa fa-list-ul"></i> Browse</a>
-                    </div>
-                  </div>
-                  <!-- TOP DESTINATION 3 : end -->
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4">
-
-                  <!-- TOP DESTINATION 4 : begin -->
-                  <div class="top-destination">
-                    <img class="destination-thumb" src="dummies/top_destination_04.jpg" alt="">
-                    <div class="top-destination-inner">
-                      <h3>Rome</h3>
-                      <a href="#" class="button"><i class="fa fa-list-ul"></i> Browse</a>
-                    </div>
-                  </div>
-                  <!-- TOP DESTINATION 4 : end -->
-
-                </div>
-                <div class="col-sm-4">
-
-                  <!-- TOP DESTINATION 5 : begin -->
-                  <div class="top-destination">
-                    <img class="destination-thumb" src="dummies/top_destination_05.jpg" alt="">
-                    <div class="top-destination-inner">
-                      <h3>Dubai</h3>
-                      <a href="#" class="button"><i class="fa fa-list-ul"></i> Browse</a>
-                    </div>
-                  </div>
-                  <!-- TOP DESTINATION 5 : end -->
-
-                </div>
-                <div class="col-sm-4">
-
-                  <!-- TOP DESTINATION 6 : begin -->
-                  <div class="top-destination">
-                    <img class="destination-thumb" src="dummies/top_destination_06.jpg" alt="">
-                    <div class="top-destination-inner">
-                      <h3>Tokyo</h3>
-                      <a href="#" class="button"><i class="fa fa-list-ul"></i> Browse</a>
-                    </div>
-                  </div>
-                  <!-- TOP DESTINATION 6 : end -->
-
-                </div>
-              </div>
+                <% end %>
+              <% end %>
 
             </div>
             <!-- BROWSE DESTINATIONS : end -->
@@ -157,97 +99,97 @@
 
                 <!-- MEMBER 1 : begin -->
                 <li class="member first-in-row">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_04_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">John Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer1.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 社團 </a></h4>
+                  <h5 class="member-place"> 交大登山社 </h5>
                 </li>
                 <!-- MEMBER 1 : end -->
 
                 <!-- MEMBER 2 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_05_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">John Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer2.jpg" alt=""></a>
+                  <h4 class="member-name"><a href="#">社團</a></h4>
+                  <h5 class="member-place">交大電機系學會</h5>
                 </li>
                 <!-- MEMBER 2 : end -->
 
                 <!-- MEMBER 3 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_06_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">Jane Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer3.gif" alt=""></a>
+                  <h4 class="member-name"><a href="#">學校</a></h4>
+                  <h5 class="member-place">交大課外活動組</h5>
                 </li>
                 <!-- MEMBER 3 : end -->
 
                 <!-- MEMBER 4 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_07_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">John Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer4.jpg" alt=""></a>
+                  <h4 class="member-name"><a href="#">NGO</a></h4>
+                  <h5 class="member-place">伊甸基金會</h5>
                 </li>
                 <!-- MEMBER 4 : end -->
 
                 <!-- MEMBER 5 : begin -->
                 <li class="member first-in-row-medium">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_08_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">Jane Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer5.gif" alt=""></a>
+                  <h4 class="member-name"><a href="#">個人</a></h4>
+                  <h5 class="member-place">花媽廚房</h5>
                 </li>
                 <!-- MEMBER 5 : end -->
 
                 <!-- MEMBER 6 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_09_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">Jane Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer6.png" alt=""></a>
+                  <h4 class="member-name"><a href="#">Schwannden Kuo</a></h4>
+                  <h5 class="member-place">新竹</h5>
                 </li>
                 <!-- MEMBER 6 : end -->
 
                 <!-- MEMBER 7 : begin -->
                 <li class="member first-in-row">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_10_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">John &amp; Jane</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer0.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 尋找更多合作夥伴 </a></h4>
+                  <h5 class="member-place"> 就是你！ </h5>
                 </li>
                 <!-- MEMBER 7 : end -->
 
                 <!-- MEMBER 8 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_11_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">Felix &amp; Maria</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer0.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 尋找更多合作夥伴 </a></h4>
+                  <h5 class="member-place"> 就是你！ </h5>
                 </li>
                 <!-- MEMBER 8 : end -->
 
                 <!-- MEMBER 9 : begin -->
                 <li class="member first-in-row-medium">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_12_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">John Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer0.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 尋找更多合作夥伴 </a></h4>
+                  <h5 class="member-place"> 就是你！ </h5>
                 </li>
                 <!-- MEMBER 9 : end -->
 
                 <!-- MEMBER 10 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_13_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">John &amp; Jane</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer0.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 尋找更多合作夥伴 </a></h4>
+                  <h5 class="member-place"> 就是你！ </h5>
                 </li>
                 <!-- MEMBER 10 : end -->
 
                 <!-- MEMBER 11 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_14_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">Jane Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer0.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 尋找更多合作夥伴 </a></h4>
+                  <h5 class="member-place"> 就是你！ </h5>
                 </li>
                 <!-- MEMBER 11 : end -->
 
                 <!-- MEMBER 12 : begin -->
                 <li class="member">
-                  <a href="#" class="member-portrait"><img src="dummies/portrait_15_160.jpg" alt=""></a>
-                  <h4 class="member-name"><a href="#">Jane Smith</a></h4>
-                  <h5 class="member-place">New York</h5>
+                  <a href="#" class="member-portrait"><img src="dummies/customer0.png" alt=""></a>
+                  <h4 class="member-name"><a href="#"> 尋找更多合作夥伴 </a></h4>
+                  <h5 class="member-place"> 就是你！ </h5>
                 </li>
                 <!-- MEMBER 12 : end -->
 
