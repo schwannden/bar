@@ -85,7 +85,9 @@
 											<div class="clearfix">
 												<div class="portrait">
 													<img src="/images/logo.png" alt="" height="150" width="150">
-													<h5 class="name"><i class="ico-person"></i> NCTU Bar</h5>
+													<h5 class="name">
+													<i class="ico-person"></i> <%= User.find_by(@bucket.user_id).organization %>
+													</h5>
 												</div>
 											</div>
 										</div>
