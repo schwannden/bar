@@ -18,5 +18,6 @@
 
 *passenger*pid*
 .DS_Store
+/.DS_Store
 *.swp
 public/uploads
