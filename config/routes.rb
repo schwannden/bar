@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
   get  'index.html' => 'home#index'
+  get  'feedback'   => 'home#feedback'
   resources :buckets, only: [:index,:show,:index_grid]
 end
