@@ -757,6 +757,7 @@ body.enable-fixed-header { padding-top: 84px; }
 
 	/* PROPERTY LOCATION DETAILS */
 	.property-location-title { margin: 0; height: 100px; line-height: 100px; text-align: center; font-size: 1.5em; border-radius: 7px 0 0 0; }
+	.property-book-title { color: #FFF; background-color: #f1155a;width:220px; margin: 0; height: 100px; line-height: 100px; text-align: center; font-size: 1.5em; border-radius: 7px 7px 0 0; }
 	.property-location-details .property-map { position: relative; }
 	.property-location-details .property-map iframe { display: block; margin: 0; width: 100%; height: 250px; border: 0; }
 	.property-location-details .property-map img { display: block; }

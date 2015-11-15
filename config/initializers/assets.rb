@@ -12,6 +12,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( admin/administration.css )
 Rails.application.config.assets.precompile += %w( admin/administration.js )
 Rails.application.config.assets.precompile += %w( admin/buckets.css )
+Rails.application.config.assets.precompile += %w( buckets.css )
 Rails.application.config.assets.precompile += %w( home.js )
 Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( admin/buckets.js )
