@@ -52,9 +52,7 @@
 				<h5 class="property-location"><%= User.find_by(bucket.user_id).organization %></h5>
 				<p class="property-description"><%= bucket.description %></p>
 				<ul class="custom-list property-icons">
-					<li class="beds" title="beds"><i></i>2</li>
-					<li class="people" title="people"><i></i>4</li>
-					<li class="bathrooms" title="bathrooms"><i></i>1</li>
+					<li class="beds" title="beds"><i></i>數量：<%= bucket.quantity %></li>
 				</ul>
 				<div class="property-price-rating">
 					<div class="property-price"><strong>$ <%= bucket.price %></strong> / 天</div>
