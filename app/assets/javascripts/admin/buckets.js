@@ -1,6 +1,8 @@
 //= require bootstrap-datepicker
 //= require admin/dropzone
 //= require control_amount
+//= require admin/datepicker
+//= require crudable
 
 // Dropzone
 Dropzone.options.galleryUpload = {

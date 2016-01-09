@@ -12,7 +12,7 @@ class Admin::BucketsController < Admin::AdminBaseController
   def create
     @admin_bucket = Bucket.new admin_bucket_params
     if @admin_bucket.save
-      current_user.buckets << @admin_bucket
+      current_user.organizations.first.buckets << @admin_bucket
       Gallery.create bucket: @admin_bucket, name: "gallery",
         image: Rails.root.join('db/image/dummy_square.jpg').open
       redirect_to edit_admin_bucket_path @admin_bucket

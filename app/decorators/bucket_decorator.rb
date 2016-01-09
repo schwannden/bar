@@ -24,6 +24,14 @@ class BucketDecorator
     @bucket.id.to_s
   end
 
+  def available_no_repeat
+    @bucket.availables.find_by filter_type: "no repeat"
+  end
+
+  def available_daterange
+    @bucket.availables.where filter_type: "daterange"
+  end
+
   def method_missing(method_name, *args, &block)
     @bucket.send(method_name, *args, &block)
   end

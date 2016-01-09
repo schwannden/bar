@@ -5,5 +5,6 @@ class Bucket < ActiveRecord::Base
 
   has_many   :galleries
   has_many   :order_items
+  has_many   :availables
   belongs_to :organization
 end
