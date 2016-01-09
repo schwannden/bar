@@ -41,21 +41,17 @@
 
   <!-- PROPERTY LIST : begin -->
   <ul class="custom-list clearfix property-list layout-list">
-    <% Bucket.all.each do |bucket| %>
+    <% Organization.all.each do |organization| %>
     <li class="property first-in-row odd">
-      <a href="/buckets/<%= bucket.id%>" class="property-thumb">
-        <img src="<%= bucket.galleries.first.image.list.url %>" alt="">
+      <a href="<%= organization_path(organization) %>" class="property-thumb">
+        <img src="<%= organization.galleries.first.image.list.url %>" alt="">
         <span class="overlay"><span><i class="fa fa-search"></i> View More</span></span>
       </a>
       <div class="property-content">
-        <h4 class="property-title"><a href="#"><%= bucket.title %></a></h4>
-        <h5 class="property-location"><%= bucket.organization.location %></h5>
-        <p class="property-description"><%= bucket.description %></p>
-        <ul class="custom-list property-icons">
-          <li class="beds" title="beds"><i></i>數量：<%= bucket.quantity %></li>
-        </ul>
+        <h4 class="property-title"><a href="#"><%= organization.name %></a></h4>
+        <h5 class="property-location"><%= organization.location %></h5>
+        <p class="property-description"><%= organization.description %></p>
         <div class="property-price-rating">
-          <div class="property-price"><strong>$ <%= bucket.price %></strong> / 天</div>
           <div class="property-rating">
             <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
           </div>

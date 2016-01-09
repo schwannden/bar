@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114171446) do
+ActiveRecord::Schema.define(version: 20160109063727) do
 
   create_table "availables", force: :cascade do |t|
     t.string   "filter_type"
@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20151114171446) do
     t.integer  "quantity"
     t.string   "price"
     t.string   "aasm_state"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "organization_id"
   end
 
   create_table "galleries", force: :cascade do |t|
@@ -37,8 +37,9 @@ ActiveRecord::Schema.define(version: 20151114171446) do
     t.string   "text"
     t.string   "image"
     t.integer  "bucket_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "organization_id"
   end
 
   create_table "order_items", force: :cascade do |t|
@@ -59,6 +60,15 @@ ActiveRecord::Schema.define(version: 20151114171446) do
     t.string   "buyer"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "location"
   end
 
   create_table "taggings", force: :cascade do |t|

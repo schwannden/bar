@@ -1,0 +1,35 @@
+<!-- CORE : begin -->
+<div id="core" class="page-search-results">
+  <!-- PAGE HEADER : begin -->
+  <div class="page-header" style="background: url(/images/bg_banner3.png)">
+    <div class="container">
+      <div class="page-header-inner clearfix">
+        <h1> 找社團 </h1>
+        <ul class="custom-list breadcrumbs">
+          <li><a href="/">Home</a> / </li>
+          <li><a href="<%= organizations_path %>"> 團體名單 </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- PAGE HEADER : end -->
+
+  <!-- MAIN WRAPPER : begin -->
+  <div class="main-wrapper-container">
+    <div class="container">
+      <div id="main-wrapper">
+        <div class="row">
+          <div class="col-md-8 col-md-push-4">
+            <%= render "organization_listing" %>
+          </div>
+          <div class="col-md-4 col-md-pull-8">
+            <%= render "organization_search" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN WRAPPER : end -->
+
+</div>
+<!-- CORE : end -->
