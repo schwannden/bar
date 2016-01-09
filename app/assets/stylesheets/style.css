@@ -542,7 +542,7 @@ body.enable-fixed-header { padding-top: 84px; }
 		PAGE HEADER
 	------------------------------------------------------------------------- */
 
-	.page-header { background-position: center; background-size: cover; }
+	.page-header { background-position: center; background-size: cover; margin: 0 0 20px; }
 	.page-header.has-nav { border-bottom: 3px solid transparent; }
 	.page-header-inner { position: relative; height: 210px; }
 	.page-header h1 { float: left; margin-top: 44px; max-width: 50%; font-size: 1.875em; line-height: 1.1em; }
@@ -926,7 +926,7 @@ body.enable-fixed-header { padding-top: 84px; }
 	.banner-search .submit-btn { display: block; }
 
 	/* CORE */
-	.page-header-nav a { padding: 20px; width: auto; }
+	.page-header-nav a { padding: 20px; width: auto; margin: 0 0 20px; }
 	#browse .browse-destinations .top-destination { text-align: center; }
 	#browse .browse-destinations .top-destination-inner { padding: 20px; }
 	#browse .browse-destinations .top-destination .button { position: relative; top: auto; right: auto; margin-top: 20px; white-space: nowrap; }
@@ -1084,7 +1084,7 @@ body.enable-fixed-header { padding-top: 84px; }
 	.banner-search .tab-title { margin-bottom: 2px; border-radius: 7px; }
 
 	/* CORE */
-	.page-header { padding-top: 40px; text-align: center; }
+	.page-header { padding-top: 40px; text-align: center; margin: 0 0 20px;}
 	.page-header.has-nav h1,
 	.page-header h1 { float: none; margin-top: 0; max-width: 100%; }
 	.page-header.has-nav .breadcrumbs,

@@ -30,6 +30,7 @@ class Admin::BucketsController < Admin::AdminBaseController
   end
 
   def destroy
+    @admin_bucket.delete
   end
 
  private

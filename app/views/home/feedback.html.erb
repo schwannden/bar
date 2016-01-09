@@ -1,145 +1,113 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <!-- STYLESHEETS : begin -->
-      <!-- CSS include order will effect the result !!, DO NOT CHANGE ORDER-->
-      <link rel="stylesheet" type="text/css" href="library/css/font-awesome.min.css">
-      <%= stylesheet_link_tag "animate.custom"    %>
-      <%= stylesheet_link_tag params[:controller] %>
-      <%= stylesheet_link_tag "style"             %>
-      <%= stylesheet_link_tag "skins/default"     %>
-      <!--link rel="stylesheet" type="text/css" href="library/css/custom.css"> uncomment if you want to use custom CSS definitions -->
-      <!-- STYLESHEETS : end -->
+<!-- CORE : begin -->
+<div id="core" class="page-about-us">
 
-        <!--[if lte IE 8]>
-      <link rel="stylesheet" type="text/css" href="library/css/oldie.css">
-      <script src="library/js/respond.min.js" type="text/javascript"></script>
-    <![endif]-->
-  </head>
-  <body class="enable-fixed-header enable-inview-animations" style="padding-top: 45px;">
-    <%= render "layouts/header"%>
+  <!-- PAGE HEADER : begin -->
+  <div class="page-header has-nav">
+    <div class="container">
+      <div class="page-header-inner">
+        <h1>讓我們變得更好</h1>
+        <ul class="custom-list breadcrumbs">
+          <li><a href="/">首頁</a> / </li>
+          <li><a href="/feedback">回饋</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- PAGE HEADER : end -->
 
-
-    <!-- CORE : begin -->
-    <div id="core" class="page-about-us">
-
-      <!-- PAGE HEADER : begin -->
-      <div class="page-header has-nav">
-        <div class="container">
-          <div class="page-header-inner">
-            <h1>讓我們變得更好</h1>
-            <ul class="custom-list breadcrumbs">
-              <li><a href="/">首頁</a> / </li>
-              <li><a href="/feedback">回饋</a></li>
+  <!-- CONTENT SECTION : begin -->
+  <section class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- HORIZONTAL TABS : begin -->
+          <div class="tabs-container">
+            <ul class="tab-title-list">
+              <li class="tab-title active"><a href="#dummy-tab-1">流程</a></li>
+              <li class="tab-title"><a href="#dummy-tab-2">特色</a></li>
+            </ul>
+            <ul class="tab-content-list">
+              <li class="tab-content active" id="dummy-tab-1" style="display: list-item;">
+                  <!-- TIMELINE : begin -->
+                  <ul class="timeline-container">
+                    <li class="timeline-item">
+                      <span class="timeline-item-label">1.</span>
+                      <h4 class="timeline-item-title"><i class="fa fa-user"></i> 註冊</h4>
+                      <h5 class="timeline-item-subtitle">註冊成為會員，並根據貴社團/團體需要管理的物品數量選擇適合您的方案</h5>
+                    </li>
+                    <li class="timeline-item">
+                      <span class="timeline-item-label">2.</span>
+                      <h4 class="timeline-item-title"><i class="fa fa-cloud-upload"></i> 上架</h4>
+                      <h5 class="timeline-item-subtitle">登入後台，上架物品</h5>
+                      <ul>
+                        <li>新增/刪除/編輯 擁有的物品</li>
+                        <li>設定每個物品的可被租借時間、數量與價格</li>
+                        <li>查看租借情況，透過日曆與圖表讓你快速掌握器材狀況</li>
+                      </ul>
+                    </li>
+                    <li class="timeline-item">
+                      <span class="timeline-item-label">3.</span>
+                      <h4 class="timeline-item-title"><i class="fa fa-check"></i> 大功告成</h4>
+                      <h5 class="timeline-item-subtitle">再也不需要繁雜的協調和催繳囉</h5>
+                      <ul>
+                        <li>租借者上網填表單，系統會自動驗證租借物品的數量與日期</li>
+                        <li>負責人在租借與歸還的日期都會自動收到通知</li>
+                        <li>租借者會收到歸還提醒與逾期通知</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- TIMELINE : end -->
+              </li>
+              <li class="tab-content" id="dummy-tab-2" style="display: none;">
+                <h6><i class="fa fa-bar-chart-o"></i> 一目瞭然</h6>
+                <p>
+                  所有可借閱的項目、時間一目了然，查看個項目品的租借狀況、再也不需要擔心
+                </p>
+                <h6><i class="fa fa-calendar"></i> 月曆</h6>
+                <p>
+                  自動同步租借日期到月曆
+                </p>
+                <h6><i class="fa fa-bell"></i> 重要通知</h6>
+                <p>
+                  <ul>
+                    <li>自動催還</li>
+                    <li>即將到期通知</li>
+                    <li>歸還與租借提醒</li>
+                  </ul>
+                </p>
+              </li>
             </ul>
           </div>
+          <!-- HORIZONTAL TABS : end -->
+          <center>
+          <br>
+          <a class="typeform-share link button" id="typeform_button" href="https://fonger.typeform.com/to/vt3Mjh" data-mode="1" target="_blank">
+            讓我們知道你的想法
+          </a>
+          <p>
+            用不到一分鐘的時間填寫問卷，幫助我們做得更好
+          </p>
+          </center>
+          <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
         </div>
       </div>
-      <!-- PAGE HEADER : end -->
-
-      <!-- CONTENT SECTION : begin -->
-      <section class="content-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <!-- HORIZONTAL TABS : begin -->
-              <div class="tabs-container">
-                <ul class="tab-title-list">
-                  <li class="tab-title active"><a href="#dummy-tab-1">流程</a></li>
-                  <li class="tab-title"><a href="#dummy-tab-2">特色</a></li>
-                </ul>
-                <ul class="tab-content-list">
-                  <li class="tab-content active" id="dummy-tab-1" style="display: list-item;">
-          						<!-- TIMELINE : begin -->
-          						<ul class="timeline-container">
-          							<li class="timeline-item">
-          								<span class="timeline-item-label">1.</span>
-          								<h4 class="timeline-item-title"><i class="fa fa-user"></i> 註冊</h4>
-          								<h5 class="timeline-item-subtitle">註冊成為會員，並根據貴社團/團體需要管理的物品數量選擇適合您的方案</h5>
-          							</li>
-          							<li class="timeline-item">
-          								<span class="timeline-item-label">2.</span>
-          								<h4 class="timeline-item-title"><i class="fa fa-cloud-upload"></i> 上架</h4>
-          								<h5 class="timeline-item-subtitle">登入後台，上架物品</h5>
-                          <ul>
-                            <li>新增/刪除/編輯 擁有的物品</li>
-                            <li>設定每個物品的可被租借時間、數量與價格</li>
-                            <li>查看租借情況，透過日曆與圖表讓你快速掌握器材狀況</li>
-                          </ul>
-          							</li>
-          							<li class="timeline-item">
-          								<span class="timeline-item-label">3.</span>
-          								<h4 class="timeline-item-title"><i class="fa fa-check"></i> 大功告成</h4>
-          								<h5 class="timeline-item-subtitle">再也不需要繁雜的協調和催繳囉</h5>
-                          <ul>
-                            <li>租借者上網填表單，系統會自動驗證租借物品的數量與日期</li>
-                            <li>負責人在租借與歸還的日期都會自動收到通知</li>
-                            <li>租借者會收到歸還提醒與逾期通知</li>
-                          </ul>
-          							</li>
-          						</ul>
-          						<!-- TIMELINE : end -->
-                  </li>
-                  <li class="tab-content" id="dummy-tab-2" style="display: none;">
-                    <h6><i class="fa fa-bar-chart-o"></i> 一目瞭然</h6>
-                    <p>
-                      所有可借閱的項目、時間一目了然，查看個項目品的租借狀況、再也不需要擔心
-                    </p>
-                    <h6><i class="fa fa-calendar"></i> 月曆</h6>
-                    <p>
-                      自動同步租借日期到月曆
-                    </p>
-                    <h6><i class="fa fa-bell"></i> 重要通知</h6>
-                    <p>
-                      <ul>
-                        <li>自動催還</li>
-                        <li>即將到期通知</li>
-                        <li>歸還與租借提醒</li>
-                      </ul>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <!-- HORIZONTAL TABS : end -->
-              <center>
-              <br>
-              <a class="typeform-share link button" id="typeform_button" href="https://fonger.typeform.com/to/vt3Mjh" data-mode="1" target="_blank">
-                讓我們知道你的想法
-              </a>
-              <p>
-                用不到一分鐘的時間填寫問卷，幫助我們做得更好
-              </p>
-              </center>
-              <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CONTENT SECTION : end -->
     </div>
-    <!-- CORE : end -->
+  </section>
+  <!-- CONTENT SECTION : end -->
+</div>
+<!-- CORE : end -->
 
-    <script>
-      function chkTypeform() {
-        var btn = document.getElementById('typeform_button');
-        if (btn.onclick)
-          btn.click();
-        else
-          setTimeout(chkTypeform, 200);
-      }
-      $(chkTypeform);
-    </script>
+<script>
+  function chkTypeform() {
+    var btn = document.getElementById('typeform_button');
+    if (btn.onclick)
+      btn.click();
+    else
+      setTimeout(chkTypeform, 200);
+  }
+  $(chkTypeform);
+  $("#trigger-login").click(function(){
+    $(".header-login .header-form").show();
+  });
+</script>
 
-    <%= render "layouts/footer"%>
-    <!-- SCRIPTS -->
-    <%= javascript_include_tag :public %>
-    <%= javascript_include_tag :scripts %>
-    <!-- SCRIPTS : end -->
-    <script>
-      $("#trigger-login").click(function(){
-        $(".header-login .header-form").show();
-      });
-    </script>
-
-  </body>
-</html>

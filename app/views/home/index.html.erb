@@ -1,43 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <!-- STYLESHEETS : begin -->
-      <!-- CSS include order will effect the result !!, DO NOT CHANGE ORDER-->
-      <link rel="stylesheet" type="text/css" href="/library/css/font-awesome.min.css">
-      <%= stylesheet_link_tag "animate.custom"    %>
-      <%= stylesheet_link_tag params[:controller] %>
-      <%= stylesheet_link_tag "style"             %>
-      <%= stylesheet_link_tag "skins/default"     %>
-      <!--link rel="stylesheet" type="text/css" href="library/css/custom.css"> uncomment if you want to use custom CSS definitions -->
-      <!-- STYLESHEETS : end -->
+<%= render "banner"%>
+<!-- CORE : begin -->
+<div id="core">
+  <%= render "services" %>
+  <%= render "browse" %>
+  <%= render "about" %>
+</div>
+<!-- CORE : end -->
 
-        <!--[if lte IE 8]>
-      <link rel="stylesheet" type="text/css" href="library/css/oldie.css">
-      <script src="library/js/respond.min.js" type="text/javascript"></script>
-    <![endif]-->
-  </head>
-  <body class="enable-fixed-header enable-inview-animations">
-    <%= render "layouts/header"%>
-    <%= render "home/banner"%>
-
-    <!-- CORE : begin -->
-    <div id="core">
-      <%= render "home/services" %>
-      <%= render "home/browse" %>
-      <%= render "home/about" %>
-    </div>
-    <!-- CORE : end -->
-
-    <%= render "layouts/footer"%>
-    <!-- SCRIPTS -->
-    <%= javascript_include_tag :public %>
-    <%= javascript_include_tag :scripts %>
-    <!-- SCRIPTS : end -->
-    <script>
-      $("#trigger-login").click(function(){
-        $(".header-login .header-form").show();
-      });
-    </script>
-
-  </body>
-</html>
+<script>
+  $("#trigger-login").click(function(){
+    $(".header-login .header-form").show();
+  });
+</script>

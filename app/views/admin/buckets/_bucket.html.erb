@@ -1,5 +1,5 @@
 <!-- PROPERTY : begin -->
-<li class="property first-in-row odd">
+<li class="property first-in-row odd" id="bucket<%= bucket.id %>">
   <a href="#" class="property-thumb">
     <img src="<%= bucket.galleries.first.image.list.url %>" alt="">
     <span class="overlay"><span><i class="fa fa-search"></i> View More</span></span>
@@ -18,8 +18,9 @@
       <div class="property-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
       <a class="button" href="<%= edit_admin_bucket_path bucket %>"> 
         <i class="fa fa-edit"></i> 編輯 </a>
-      <a class="button color-2"> <i class="fa fa-minus"></i> 刪除 </a>
-    </div>
+      <%= link_to admin_bucket_path(bucket), class: "button color-2", method: :delete, remote: true do %>
+        <i class="fa fa-minus"></i> 刪除 </a>
+      <% end %>
   </div>
 </li>
 <!-- PROPERTY : end -->
