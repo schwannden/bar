@@ -1,60 +1,60 @@
 <div id="availables" class="main_title" style="margin: 40px 0 0 0;">
-  <h2> 編輯 <span> 可出借日期      </span> </h2>
+  <h2> 可出借日期      </span> </h2>
 </div>
 <hr>
 <%= form_for :admin_available, remote: true, 
   url: admin_bucket_availables_path(@admin_bucket) do |f| %>
-    <div class="row">
-      <h3> 選擇個別日期 </h3>
-      <div class="col-md-3">
-        <div class="input-group">
-          <label class="input-group-addon"> 價格 </label>
-          <input id="admin_bucket_date_price" type="text" name="price">
-        </div>
-      </div>
-      <div class="col-md-3">
-        <a href="#" id="toggle-date-pick" class="btn_1 outline"> 選擇日期 </a>
+  <div class="row">
+    <h3> 選擇個別日期 </h3>
+    <div class="col-md-3">
+      <div class="input-group">
+        <label class="input-group-addon"> 價格 </label>
+        <input id="admin_bucket_date_price" type="text" name="price">
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-offset-3 col-md-3">
-        <input type="text" id="admin_available_no_repeat" class="form-control date"
-          data-date-format="yyyy-mm/dd" style="height: 0px; width: 0px; padding: 0 0 0 0;">
-        <%= f.hidden_field :filter, value: @admin_bucket.available_no_repeat.filter %>
-      </div>
+    <div class="col-md-3">
+      <a href="#" id="toggle-date-pick" class="btn btn-info outline"> 選擇日期 </a>
     </div>
-    <div class="row">
-      <table class="table table-striped">
-        <h3> 選擇日期範圍 </h3>
-        <tbody>
-          <% @admin_bucket.available_daterange.each do |daterange| %>
-            <% dates = JSON.parse daterange.filter %>
-            <tr class="crudable-daterange">
-              <td class="col-md-7">
-                <div class="input-daterange" >
-                  <span class="add-on" style="vertical-align: top;height:20px"> 從 </span>
-                  <input type="text" class="input-small" name="admin_available[start][]" 
-                    value="<%= dates["start_date"] %>" />
-                  <span class="add-on" style="vertical-align: top;height:20px"> 到 </span>
-                  <input type="text" class="input-small" name="admin_available[end][]"
-                    value="<%= dates["end_date"] %>" />
-                </div>
-              </td>
-              <td class="col-md-4">
-                <div class="input-group">
-                  <label class="input-group-addon"> 價格 </label>
-                  <input type="text" class="form-control notice_text" name="admin_available[price][]" 
-                    value="<%= dates["price"] %>" placeholder="留空則為旅程原本價格" />
-                </div>
-              </td>
-              <td> <div class="crudable-create btn btn-info"   >+</div> </td>
-              <td> <div class="crudable-delete btn btn-danger" >-</div> </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-3 col-md-3">
+      <input type="text" id="admin_available_no_repeat" class="form-control date"
+        data-date-format="yyyy-mm/dd" style="height: 0px; width: 0px; padding: 0 0 0 0;">
+      <%= f.hidden_field :filter, value: @admin_bucket.available_no_repeat.filter %>
     </div>
-    <div class="actions">
-      <%= f.submit "更新", class: "btn_full" %>
-    </div>
+  </div>
+  <div class="row">
+    <table class="table table-striped">
+      <h3> 選擇日期範圍 </h3>
+      <tbody>
+        <% @admin_bucket.available_daterange.each do |daterange| %>
+          <% dates = JSON.parse daterange.filter %>
+          <tr class="crudable-daterange">
+            <td class="col-md-7">
+              <div class="input-daterange" >
+                <span class="add-on" style="vertical-align: top;height:20px"> 從 </span>
+                <input type="text" class="input-small" name="admin_available[start][]" 
+                  value="<%= dates["start_date"] %>" />
+                <span class="add-on" style="vertical-align: top;height:20px"> 到 </span>
+                <input type="text" class="input-small" name="admin_available[end][]"
+                  value="<%= dates["end_date"] %>" />
+              </div>
+            </td>
+            <td class="col-md-4">
+              <div class="input-group">
+                <label class="input-group-addon"> 價格 </label>
+                <input type="text" class="form-control notice_text" name="admin_available[price][]" 
+                  value="<%= dates["price"] %>" placeholder="留空則為旅程原本價格" />
+              </div>
+            </td>
+            <td> <div class="crudable-create btn btn-info"   >+</div> </td>
+            <td> <div class="crudable-delete btn btn-danger" >-</div> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="actions">
+    <%= f.submit "更新", class: "btn_full" %>
+  </div>
 <% end %>
