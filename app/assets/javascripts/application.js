@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr.custom.min
+//= require bootstrap.min
 

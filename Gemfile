@@ -32,7 +32,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
